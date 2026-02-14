@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Espero que te guste jeje</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#0b0f1a" />
+
+  <link rel="preconnect" href="https://open.spotify.com">
+  <link rel="preconnect" href="https://i.scdn.co">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Fondo dinámico -->
+  <div class="bg">
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- ===== HERO ===== -->
+    <header class="card hero revealOnScroll" id="top">
+      <div class="toprow">
+        <span class="pill">✨ Secreto</span>
+
+        <button class="iconbtn" id="btnTheme" aria-label="Cambiar ambiente" title="Cambiar ambiente">
+          <span class="icon">☾</span>
+        </button>
+      </div>
+
+      <h1>Para <span id="nombre">Ana</span></h1>
+
+      <p class="lead">
+        Esta pagina es un sitio en el que puedes volver las veces que quieras
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="statn" id="countOpen">0</div>
+          <div class="statl">visitas</div>
+        </div>
+        <div class="stat">
+          <div class="statn" id="today">--</div>
+          <div class="statl">hoy</div>
+        </div>
+        <div class="stat">
+          <div class="statn" id="modeLabel">suave</div>
+          <div class="statl">ambiente</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="btnStart">💌 Empezar</button>
+        <button class="btn ghost" id="btnSecret">🔒 Modo secreto</button>
+      </div>
+
+      <p class="hint">Consejo: pon el brillo un poquito más bajo y ponte cómoda.</p>
+    </header>
+
+    <!-- ===== FOTO GRANDE ===== -->
+    <section class="card section revealOnScroll" id="sectionPhoto">
+      <div class="sectionTitle">
+        <h2>🖼️ Un recuerdo</h2>
+        <p class="muted">Tócalo si quieres verlo en grande.</p>
+      </div>
+
+      <figure class="heroPhoto" id="openLightbox" role="button" tabindex="0" aria-label="Ver foto en grande">
+        <img src="assets/foto-grande.jpg" alt="Foto grande" loading="lazy" />
+        <figcaption class="caption">
+          <span class="capTitle">No hace falta decir mucho.</span>
+          <span class="capSub">A veces basta con volver aquí.</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== CANCIONES ===== -->
+    <section class="card section revealOnScroll" id="sectionMain">
+      <div class="sectionTitle">
+        <h2>🎧 6 canciones, 6 momentos</h2>
+        <p class="muted">Ya que no tenias Spotify premium quería darte una sorpresita </p>
+      </div>
+
+      <div class="chips" id="chips">
+        <button class="chip on" data-filter="all">Todo</button>
+        <button class="chip" data-filter="buenos">Días buenos</button>
+        <button class="chip" data-filter="calma">Calma</button>
+        <button class="chip" data-filter="menos">Echar de menos</button>
+        <button class="chip" data-filter="valentia">Valentía</button>
+        <button class="chip" data-filter="no-digo">Lo que no digo</button>
+        <button class="chip" data-filter="nueva">Nueva</button>
+      </div>
+
+      <div class="grid" id="gridSongs">
+
+        <article class="song" data-tag="buenos">
+          <div class="songHead">
+            <div>
+              <h3>Para los días buenos</h3>
+              <p class="muted">Para cuando todo va bien y solo apetece disfrutarlo.</p>
+            </div>
+            <button class="mini" data-reveal="m1">+ leer</button>
+          </div>
+          <p class="reveal" id="m1">“Me encanta cuando todo es fácil contigo.”</p>
+          <div class="embed">
+            <iframe class="spotify" title="Spotify track 1"
+              src="https://open.spotify.com/embed/track/05xKnnH3CVhY9UfD460sKI?si=582e2c84a40a41ab"
+              loading="lazy" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>
+
+
+        <article class="song" data-tag="calma">
+          <div class="songHead">
+            <div>
+              <h3>Para bajar revoluciones</h3>
+              <p class="muted">Para cuando necesitas respirar un poco.</p>
+            </div>
+            <button class="mini" data-reveal="m2">+ leer</button>
+          </div>
+          <p class="reveal" id="m2">“No tienes que poder con todo sola.”</p>
+          <div class="embed">
+            <iframe class="spotify" title="Spotify track 2"
+              src="https://open.spotify.com/embed/track/0wzC02iW7IaqAASCgDR2Qs?si=35af345400ce4e8c"
+              loading="lazy" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article> 
+
+        <article class="song" data-tag="menos">
+          <div class="songHead">
+            <div>
+              <h3>Para cuando me eches de menos</h3>
+              <p class="muted">Para esos momentos raros en los que algo falta.</p>
+            </div>
+            <button class="mini" data-reveal="m3">+ leer</button>
+          </div>
+          <p class="reveal" id="m3">“Si estás aquí, es uno de esos días. Ya pasará.”</p>
+          <div class="embed">
+            <iframe class="spotify" title="Spotify track 3"
+              src="https://open.spotify.com/embed/track/6A8ZNt71PS4PuBtxbdXV0L?utm_source=generator&theme=0"
+              loading="lazy" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>
+
+        <article class="song" data-tag="valentia">
+          <div class="songHead">
+            <div>
+              <h3>Para darte fuerza</h3>
+              <p class="muted">Para cuando te acuerdes de lo capaz que eres.</p>
+            </div>
+            <button class="mini" data-reveal="m4">+ leer</button>
+          </div>
+          <p class="reveal" id="m4">“Me encanta cómo te enfrentas a la vida.”</p>
+          <div class="embed">
+            <iframe class="spotify" title="Spotify track 4"
+              src="https://open.spotify.com/embed/track/1dzQoRqT5ucxXVaAhTcT0J?si=e45aed5298bc4e59"
+              loading="lazy" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>
+
+        <article class="song" data-tag="no-digo">
+          <div class="songHead">
+            <div>
+              <h3>Lo que no sé decir en persona</h3>
+              <p class="muted">Porque a veces la música habla mejor que yo.</p>
+            </div>
+            <button class="mini" data-reveal="m5">+ leer</button>
+          </div>
+          <p class="reveal" id="m5">“Me gusta lo que estamos construyendo, sin prisas.”</p>
+          <div class="embed">
+            <iframe class="spotify" title="Spotify track 5"
+              src="https://open.spotify.com/embed/track/24fwLB47pPPSnMTs9Q3jHj?si=d6aec82a6ed04afe"
+              loading="lazy" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>
+
+        <article class="song" data-tag="nuevo">
+          <div class="songHead">
+            <div>
+              <h3>Para que te la aprendas</h3>
+              <p class="muted">Imagino que antes de que veas esto ya te la habré puesto 30 veces ya por lo menos</p>
+            </div>
+            <button class="mini" data-reveal="m6">+ leer</button>
+          </div>
+          <p class="reveal" id="m6">“Me encanta cómo te enfrentas a la vida.”</p>
+          <div class="embed">
+            <iframe class="spotify" title="Spotify track 6"
+              src="https://open.spotify.com/embed/track/623kbEIDhzRFLVk1r8cBTm?si=778261fcc882448a"
+              loading="lazy" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </article>        
+
+      </div>
+    </section>
+
+    <!-- ===== FINALE PREMIUM ===== -->
+    <section class="card finale revealOnScroll" id="finale">
+
+      <div class="finaleTop">
+        <div>
+          <h2 class="finaleTitle">Cuando llegues hasta aquí</h2>
+          <p class="finaleSub">Un cierre pequeño, pero de los que se quedan.</p>
+        </div>
+
+        <div class="finaleStats">
+          <div class="miniStat">
+            <div class="miniN" id="heartsSaved">0</div>
+            <div class="miniL">corazones</div>
+          </div>
+          <div class="miniStat">
+            <div class="miniN" id="countOpen2">0</div>
+            <div class="miniL">visitas</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="finaleGrid">
+        <!-- Carta -->
+        <article class="paper">
+          <div class="paperHeader">
+            <span class="seal">✉️</span>
+            <span class="paperTag">carta</span>
+          </div>
+
+          <p class="paperText" id="typed"></p>
+
+          <div class="paperActions">
+            <button class="btn primary" id="btnOpenFinal">🗝️ Abrir cierre</button>
+            <button class="btn ghost" id="btnCopy">📎 Copiar</button>
+          </div>
+
+          <p class="tiny muted" id="status" aria-live="polite"></p>
+        </article>
+
+        <!-- Momento final -->
+        <aside class="moment">
+          <div class="momentCard">
+            <div class="momentTitle">Esto es para esos días</div>
+
+            <div class="momentLine" id="finalReveal">(toca “Abrir cierre”)</div>
+
+            <div class="momentActions">
+              <button class="pillBtn" id="btnHeart">🫶 Guardar un corazón</button>
+              <button class="pillBtn" id="btnConfetti">🎉 Confeti</button>
+            </div>
+
+            <div class="progressWrap" aria-hidden="true">
+              <div class="progressBar" id="progressBar"></div>
+            </div>
+
+            <p class="tiny muted">Ábrelo sin prisas.</p>
+          </div>
+        </aside>
+      </div>
+
+      <canvas id="fxFull" class="fxFull" width="1" height="1"></canvas>
+    </section>
+
+    <!-- ===== LIGHTBOX FOTO GRANDE ===== -->
+    <dialog class="lightbox" id="lightbox">
+      <form method="dialog" class="lightboxCard">
+        <button class="iconbtn close" value="cancel" aria-label="Cerrar">✕</button>
+        <img src="assets/foto-grande.jpg" alt="Foto grande ampliada" />
+        <p class="tiny muted">Toca fuera o la ✕ para cerrar.</p>
+      </form>
+    </dialog>
+
+    <!-- ===== MODAL SECRETO (foto secreta) ===== -->
+    <dialog class="modal" id="secretModal">
+      <form method="dialog" class="modalCard">
+        <div class="modalTop">
+          <h3>🔒 Modo secreto</h3>
+          <button class="iconbtn" value="cancel" aria-label="Cerrar">✕</button>
+        </div>
+
+        <p class="muted">
+          Si sabes la clave, se desbloquea algo extra.
+          <br><span class="tiny">Pista: una palabra que usarías para describir “lo nuestro”.</span>
+        </p>
+
+        <label class="label">
+          Clave
+          <input class="input" id="secretInput" placeholder="Escribe aquí…" autocomplete="off" />
+        </label>
+
+        <div class="actions">
+          <button class="btn primary" id="btnUnlock" value="default">Desbloquear</button>
+          <button class="btn ghost" value="cancel">Ahora no</button>
+        </div>
+
+        <div class="secretBox" id="secretBox" hidden>
+          <p class="secretTitle">✅ Desbloqueado</p>
+
+          <figure class="polaroid">
+            <img src="assets/foto-secreta.jpg" alt="Foto secreta" loading="lazy" />
+            <figcaption>Esto era solo para ti.</figcaption>
+          </figure>
+
+          <p id="secretText">“Me encantas. Y me gusta que esto vaya a su ritmo.”</p>
+        </div>
+      </form>
+    </dialog>
+
+    <footer class="footer tiny muted">
+      <p>Ábrelo sin prisas.</p>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
