@@ -7,7 +7,7 @@
   const HEARTS_KEY = "sv_hearts_v1";
 
   // ===== Secret key (cámbiala si quieres) =====
-  const SECRET_KEY = "despacio"; // minúsculas, sin acentos
+  const SECRET_KEY = "sushi"; // minúsculas, sin acentos
 
   // ===== Helpers =====
   const safe = (fn) => { try { fn(); } catch {} };
@@ -116,9 +116,12 @@
 
   // ===== Typewriter in finale =====
   const LETTER_TEXT =
-    "No sabía muy bien cómo decir todo esto, así que lo dejé aquí.\n" +
-    "Gracias por aparecer en mi vida."
-    "";
+    "No soy muy bueno expresando lo que siento, pero contigo me nacen ganas de intentarlo. Hay cosas que se vuelven importantes sin hacer ruido, y tú te volviste una de ellas sin que me diera cuenta,  " +
+    "en el momento que dejaste de ser alguien con quien hablaba, para convertirte en alguien que espero todos los días. Llevamos ya unos meses y, aunque todavía no tenemos una etiqueta, siento que lo nuestro es especial y muy sincero. Me gusta lo fácil que se siente estar contigo: reír, hablar de cualquier cosa, compartir el día. Sin darme cuenta ya formas parte de mi rutina, y eso me encanta." +
+    "No sé exactamente a dónde nos llevará esto, pero sí sé que me gusta lo que somos y cómo se siente. Gracias por elegirme y por dejarme elegirte. 💛"
+    ;
+
+
 
   safe(() => {
     const finale = $("#finale");
